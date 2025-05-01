@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحلات مناسبة لك</title>
+    <style>
+        /* الخطوط */
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Tajawal', sans-serif;
+            background-image: url('backg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        /* القائمة الثابتة */
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu a {
+            color: rgb(255, 233, 108);
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        .auth-buttons button {
+            margin-left: 10px;
+            padding: 8px 16px;
+            background: linear-gradient(45deg, #ff5722, #e64a19);
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .auth-buttons button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+        }
+
+        /* محتوى الصفحة */
+        h1 {
+            margin-top: 100px;
+            text-align: center;
+            font-size: 2.5em;
+            color: #ffffff;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        form {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        form input, form select, form button {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin: 5px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        form input:focus, form select:focus {
+            border-color: #ff5722;
+            box-shadow: 0 0 8px rgba(255, 87, 34, 0.5);
+            outline: none;
+        }
+
+        form button {
+            background: linear-gradient(45deg, #ff5722, #e64a19);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 50px;
+        }
+
+        form button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+        }
+
+        #plan {
+            text-align: center;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            animation: slideUp 1s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        #plan h2 {
+            font-size: 2em;
+            color: #333;
+        }
+
+        #plan p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        #plan img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- القائمة الثابتة -->
+    <div class="menu">
+        <div class="logo">
+            <img src="logo4.png" alt="Logo" style="width: 110px; height: 50px;">
+        </div>
+        <a href="MiainActivity.html">الصفحة الرئيسية</a>
+        <a href="Exploretrips%20.html">استكشاف الرحلات</a>
+        <a href="Tripsspecial.html">رحلات خاصة</a>
+        <a href="suitsyou.html">الرحلات المناسبة لك</a>
+        <a href="about.html">من نحن</a>
+
+        <div class="auth-buttons">
+            <button><a style="color: white; text-decoration: none;" href="log.html">تسجيل الدخول</a></button>
+            <button>اشتراك</button>
+        </div>
+    </div>
+
+    <!-- محتوى الصفحة -->
+    <h1>خطط السفر الذكية</h1>
+    <form id="travelForm">
+        <input type="number" id="budget" placeholder="الميزانية بالدينار" required>
+        <input type="number" id="days" placeholder="عدد الأيام" required>
+        <select id="interest">
+            <option value="beaches">شواطئ</option>
+            <option value="mountains">جبال</option>
+            <option value="culture">ثقافة</option>
+        </select>
+        <select id="interest2">
+            <option value="summer">صيف</option>
+            <option value="winter">شتاء</option>
+            <option value="autumn">خريف</option>
+            <option value="spring">ربيع</option>
+        </select>
+        <button type="button" onclick="generatePlan()">اقتراح خطة</button>
+    </form>
+    <div id="plan"></div>
+
+    <script>
+        function generatePlan() {
+            const budget = document.getElementById("budget").value;
+            const days = document.getElementById("days").value;
+            const interest = document.getElementById("interest").value;
+            const season = document.getElementById("interest2").value;
+
+            let destination = "";
+            let imageSrc = "";
+            if (interest === "beaches") {
+                if (season === "summer") {
+                    destination = "العقبة";
+                    imageSrc = "aqaba.jpg";  // تأكد من أن الصورة موجودة في المجلد الصحيح
+                } else {
+                    destination = "البحر الميت";
+                    imageSrc = "deadsea.jpg";  // تأكد من أن الصورة موجودة في المجلد الصحيح
+                }
+            } else if (interest === "mountains") {
+                if (season === "winter") {
+                    destination = "عجلون";
+                    imageSrc = "ajloun.jpg";  // تأكد من أن الصورة موجودة في المجلد الصحيح
+                } else {
+                    destination = "وادي رم";
+                    imageSrc = "wadi_rum.jpg";  // تأكد من أن الصورة موجودة في المجلد الصحيح
+                }
+            } else if (interest === "culture") {
+                if (season === "autumn") {
+                    destination = "جرش";
+                    imageSrc = "jerash.jpg";  // تأكد من أن الصورة موجودة في المجلد الصحيح
+                } else {
+                    destination = "مادبا";
+                    imageSrc = "madaba.jpg";  // تأكد من أن الصورة موجودة في المجلد الصحيح
+                }
+            }
+
+            const planDiv = document.getElementById("plan");
+            planDiv.innerHTML = `
+                <h2>خطة السفر المقترحة:</h2>
+                <p>وجهتك: ${destination}</p>
+                <p>عدد الأيام: ${days}</p>
+                <p>الميزانية المقدرة: ${budget} دينار</p>
+                <p>الموسم: ${season === "summer" ? "صيف" : season === "winter" ? "شتاء" : season === "autumn" ? "خريف" : "ربيع"}</p>
+                <img src="${imageSrc}" alt="${destination}" style="width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px;">
+            `;
+        }
+    </script>
+</body>
+</html>

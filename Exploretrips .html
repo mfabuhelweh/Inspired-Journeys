@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>استكشاف الرحلات</title>
+    <style>
+        /* الخطوط */
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Tajawal', sans-serif;
+            background-image: url('backg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* القائمة الثابتة */
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu a {
+            color: rgb(255, 233, 108);
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        .auth-buttons button {
+            margin-left: 10px;
+            padding: 8px 16px;
+            background: linear-gradient(45deg, #ff5722, #e64a19);
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .auth-buttons button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+        }
+
+        /* بطاقات الرحلات */
+        .trips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 20px;
+            margin-top: 100px;
+            justify-content: center;
+        }
+
+        .trip-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 15px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .trip-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .trip-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 3px solid #ddd;
+            transition: transform 0.3s ease;
+        }
+
+        .trip-card img:hover {
+            transform: scale(1.1);
+        }
+
+        .trip-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .trip-content h3 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .trip-content p {
+            font-size: 14px;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .trip-content a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background: linear-gradient(45deg, #ff5722, #e64a19);
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .trip-content a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- القائمة الثابتة -->
+    <div class="menu">
+        <div class="logo">
+            <img src="logo4.png" alt="Logo" style="width: 110px; height: 50px;">
+        </div>
+        <a href="MiainActivity.html">الصفحة الرئيسية</a>
+        <a href="Exploretrips%20.html">استكشاف الرحلات</a>
+        <a href="Tripsspecial.html">رحلات خاصة</a>
+        <a href="suitsyou.html">الرحلات المناسبة لك</a>
+        <a href="about.html">من نحن</a>
+
+        <div class="auth-buttons">
+            <button><a style="color: white; text-decoration: none;" href="log.html">تسجيل الدخول</a></button>
+            <button>اشتراك</button>
+        </div>
+    </div>
+
+    <!-- بطاقات الرحلات -->
+    <div class="trips">
+        <div class="trip-card">
+            <img src="ptra.jpg" alt="البتراء">
+            <div class="trip-content">
+                <h3>البتراء</h3>
+                <p>البتراء، والمعروفة بـ "المدينة الوردية"، هي واحدة من أشهر وأهم المواقع الأثرية في الأردن.</p>
+                <a href="#">عرض الرحلة</a>
+            </div>
+        </div>
+        <div class="trip-card">
+            <img src="tlfrek.jpg" alt="تلفريك عجلون">
+            <div class="trip-content">
+                <h3>تلفريك عجلون</h3>
+                <p>يقع تلفريك عجلون في محافظة عجلون شمال الأردن.</p>
+                <a href="#">عرض الرحلة</a>
+            </div>
+        </div>
+        <div class="trip-card">
+            <img src="RM.jpg" alt="وادي رم">
+            <div class="trip-content">
+                <h3>وادي رم</h3>
+                <p>يقع وادي رم في جنوب الأردن، ويُعرف أيضًا باسم "وادي القمر".</p>
+                <a href="#">عرض الرحلة</a>
+            </div>
+        </div>
+        <div class="trip-card">
+            <img src="deadsea.jpg" alt="البحر الميت">
+            <div class="trip-content">
+                <h3>البحر الميت</h3>
+                <p>يُعتبر البحر الميت أخفض نقطة على سطح الأرض.</p>
+                <a href="#">عرض الرحلة</a>
+            </div>
+        </div>
+        <div class="trip-card">
+            <img src="ahrm.jpg" alt="أهرامات الجيزة">
+            <div class="trip-content">
+                <h3>أهرامات الجيزة</h3>
+                <p>موقع أثري في مصر يضم الهرم الأكبر، وهرم خفرع، وهرم منقرع، بالإضافة إلى أبو الهول.</p>
+                <a href="#">عرض الرحلة</a>
+            </div>
+        </div>
+        <div class="trip-card">
+            <img src="maldive.jpg" alt="جزر المالديف">
+            <div class="trip-content">
+                <h3>جزر المالديف</h3>
+                <p>جزر المالديف هي وجهة سياحية شهيرة تشتهر بشواطئها الرملية البيضاء ومياهها الفيروزية.</p>
+                <a href="#">عرض الرحلة</a>
+            </div>
+        </div>
+        <div class="trip-card">
+            <img src="India.jpg" alt="الهند">
+            <div class="trip-content">
+                <h3>الهند</h3>
+                <p>الهند هي دولة ذات تاريخ غني وثقافة متنوعة وتشتهر بمعالمها التاريخية والطبيعية.</p>
+                <a href="#">عرض الرحلة</a>
+            </div>
+        </div>
+        <div class="trip-card">
+            <img src="Italia.jpg" alt="إيطاليا">
+            <div class="trip-content">
+                <h3>إيطاليا</h3>
+                <p>إيطاليا هي موطن للعديد من المعالم التاريخية مثل الكولوسيوم وبرج بيزا المائل.</p>
+                <a href="#">عرض الرحلة</a>
+            </div>
+        </div>
+
+
+        <div class="trip-card">
+            <img src="sen.webp" alt="الصين">
+            <div class="trip-content">
+                <h3>سور الصين العظيم</h3>
+                <p>يعتبر سور الصين العظيم مشروعا دفاعيا عسكريا قديما بارزا ونادرا في التاريخ المعماري البشري. إنه رمز للأمة الصينية، ولم يظهر ذكاء أسلاف الصينيين فحسب، بل يجسد جهدا بذلوا فيه العرق والدماء.</p>
+                <a href="#">عرض الرحلة</a>
+            </div>
+        </div>
+
+        <div class="trip-card">
+            <img src="maldev.jpg" alt="مالديف">
+            <div class="trip-content">
+                <h3>المالديف</h3>
+                <p>هي دولة أرخبيلية مسلمَة تقع في جنوب قارة آسيا في المحيط الهندي، ويمر عليها خط الاستواء جنوبًا، وتقع جنوب غرب سريلانكا والهند. تمتد سلسلة من ست وعشرين جزيرة من الجزر المرجانية.</p>
+                <a href="#">عرض الرحلة</a>
+            </div>
+        </div>
+        <div class="trip-card">
+            <img src="bali.jpg" alt="مالديف">
+            <div class="trip-content">
+                <h3> بالي</h3>
+                <p>هي تعتبر من أشهر جزر أندونيسيا الساحرة، مع المناظر الطبيعية المتنوعة من التلال والجبال، والسواحل الوعرة والشواطئ الرملية، تراسات الأرز الخصبة والتلال البركانية الجرداء كلها توفر خلفية خلابة لثقافة ملونة وعميقة الروحية وفريدة من نوعها جعلها تلقّب بالجنة على الأرض. مع ركوب الأمواج على مستوى العالم والغوص،<p>
+                <a href="#">عرض الرحلة</a>
+            </div>
+        </div>
+
+        <div class="trip-card">
+            <img src="milan.jpg" alt="مالديف">
+            <div class="trip-content">
+                <h3>ميلان</h3>
+                <p>تعد الساحة من أهم الأماكن السياحية للسياح وتعتبر نقطة تجمع شعبي للسياح وتمتد على مساحة تقدر بـ 17000 متر مربع وتمتزج المعالم بالحضارة والتاريخ ويقع تمثال فروسي للملك فيتوريو إيمانويل الثاني أول ملوك إيطاليا في وسط الساحة و تضم الساحة كاتدرائية دومو الشهيرة </p>
+                <a href="#">عرض الرحلة</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

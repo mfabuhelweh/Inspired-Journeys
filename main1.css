@@ -1,0 +1,49 @@
+
+body{background-image: url(backg.jpg);
+    background-repeat: no-repeat;
+    color: rgb(121, 230, 193);
+    font-size: 40px;
+    background-attachment: fixed;
+    background-size: cover; 
+    
+    }
+    .menu {
+        display: flex;
+        justify-content: space-around;
+        background-color: #12030365;
+        font-family: Arial;
+        position: fixed;
+        top: 0; 
+        left: 0; 
+        width: 100%;
+    }
+        form{vertical-align: middle;
+    margin-top:  50px;
+color: black;}
+        fieldset{width: 700px;
+        text-align: center;
+        vertical-align: middle;
+        background-color: rgba(19, 32, 212, 0.158);
+        font-family: Arial;
+
+        }
+        input{ width: 90px; height: 30px;}
+    h1{
+        color:  rgb(244, 254, 135) ;
+    text-shadow: 5px 5px 11px rgba(8, 0, 252, 0.998);
+    font-family: "Bookman Old Style";}
+    a{overflow: hidden;
+            font-family: Arial;
+    color: rgb(255, 233, 108);
+    font-family: Arial;
+
+    text-decoration: none;}
+
+    .btn1{
+        background-color:rgba(109, 255, 221, 0.724) ;
+width: 120px; height: 40px;
+size : 50px;
+font-family: Arial;
+font-size: 400;
+}
+

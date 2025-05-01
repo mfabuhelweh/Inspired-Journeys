@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رحلات خاصة</title>
+    <style>
+        /* الخطوط */
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Tajawal', sans-serif;
+            background-image: url('backg.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        /* القائمة الثابتة */
+        .menu {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 10px;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .menu a {
+            color: rgb(255, 233, 108);
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .menu a:hover {
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.1);
+        }
+
+        .auth-buttons button {
+            margin-left: 10px;
+            padding: 8px 16px;
+            background: linear-gradient(45deg, #ff5722, #e64a19);
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .auth-buttons button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+        }
+
+        /* محتوى الصفحة */
+        h1 {
+            margin-top: 100px;
+            text-align: center;
+            font-size: 2.5em;
+            color: #ffffff;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .contents {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .contents label {
+            font-size: 1.2em;
+        }
+
+        .contents select, .contents button {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin: 5px;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contents select:focus, .contents button:focus {
+            border-color: #ff5722;
+            box-shadow: 0 0 8px rgba(255, 87, 34, 0.5);
+            outline: none;
+        }
+
+        .contents button {
+            background: linear-gradient(45deg, #ff5722, #e64a19);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contents button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+        }
+
+        /* بطاقات الأماكن */
+        .places-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px;
+        }
+
+        .place-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .place-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .place-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .place-name {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .place-description {
+            font-size: 14px;
+            color: #666;
+        }
+
+
+
+        .places-container a {
+            display: inline-block;
+            padding: 10px 20px;
+            color: white;
+            background: linear-gradient(45deg, #ff5722, #e64a19);
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .places-container  a:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.4);
+        }
+
+    </style>
+</head>
+<body>
+    <!-- القائمة الثابتة -->
+    <div class="menu">
+        <div class="logo">
+            <img src="logo4.png" alt="Logo" style="width: 110px; height: 50px;">
+        </div>
+        <a href="MiainActivity.html">الصفحة الرئيسية</a>
+        <a href="Exploretrips%20.html">استكشاف الرحلات</a>
+        <a href="Tripsspecial.html">رحلات خاصة</a>
+        <a href="suitsyou.html">الرحلات المناسبة لك</a>
+        <a href="about.html">من نحن</a>
+
+        <div class="auth-buttons">
+            <button><a style="color: white; text-decoration: none;" href="log.html">تسجيل الدخول</a></button>
+            <button>اشتراك</button>
+        </div>
+    </div>
+
+    <!-- محتوى الصفحة -->
+    <h1>اختر شخصيتك</h1>
+    <div class="contents">
+        <label for="personality">اختر شخصيتك:</label>
+        <select id="personality">
+            <option value="علاجية">علاجية</option>
+            <option value="ترفيهية" selected>ترفيهية</option>
+            <option value="دينية">دينية</option>
+        </select>
+        <button onclick="suggestPlaces()">عرض الأماكن المناسبة</button>
+    </div>
+
+    <!-- بطاقات الأماكن -->
+    <div class="places-container" id="places-container"></div>
+
+    <script>
+        function suggestPlaces() {
+            const personality = document.getElementById("personality").value;
+            let places = [];
+            switch(personality) {
+                case "علاجية":
+                    places = [
+                        { name: "حمامات ماعين", description: "توفر مياه دافئة ومعدنية، وهي مثالية للاسترخاء والعلاج.", imgSrc: "7mam.JPG" },
+                        { name: "تاييلاند", description: "تحقيق الاسترخاء العميق وتنشيط الطاقة الحيوية حيث تجمع بين الطبيعة الخلابة والعلاجات التقليدية المميزة", imgSrc: "Thailand.JPG" },
+                        { name: "الهند", description: "يشتهر الطب الأيورفيدي في الهند وهو نظام طبي شامل يعتمد على النباتات الطبية واليوغا لتحقيق التوازن الداخلي والشفاء حيث تعتبر من أهم أماكن السياحة العلاجية في العالم.", imgSrc: "India.JPG" },
+                        { name: "المانيا", description: "علاجات متعددة تشمل العلاج الطبيعي والعلاج الطبي والعلاجات النفسية والعلاجات بالمياه الحرارية والتدليك الطبي بالإضافة إلى العديد من الخدمات الرفاهية مثل السبا والمنتجعات الصحية التي توفر بيئة مثالية للاسترخاء والتجديد.", imgSrc: "Germany.JPG" },
+                        { name: "سنغافورة", description: "دراسة طرق استخدام الخلايا الجذعية في العلاج في معاهدها الطبية، وهو ما أدى إلى أن تشتهر البلد بهذا النوع من العلاج والذي بات يُعرف على نطاق واسع في العالم باسم سياحة الخلايا الجذعية", imgSrc: "sango.webp" }
+                    ];
+                    break;
+                case "ترفيهية":
+                    places = [
+                        { name: "ميامي، الولايات المتحدة", description: "منتجع على شاطئ البحر مع خدمات استثنائية.", imgSrc: "miami.JPG" },
+                        { name: "كوبنهاغن، الدنمارك", description: "أفضل المطاعم لتجربة طعام مميزة.", imgSrc: "copen.JPG" },
+                        { name: "باريس، فرنسا", description: "تُعتبر وجهة رومانسية وثقافية، مع معالم مشهورة مثل برج إيفل ومتاحف فاخرة.", imgSrc: "paris.JPG" },
+                        { name: "دبي، الإمارات العربية المتحدة", description: "معروفة بفنادقها الفاخرة مثل برج العرب وتقدم تجارب تسوق وترفيه مذهلة", imgSrc: "dubai.JPG" },
+                        { name: "طوكيو، اليابان", description: "مدينة حديثة تقدم مزيجًا من الثقافة التقليدية والتكنولوجيا الحديثة، مع اختيارات فندقية فاخرة.", imgSrc: "tokyo.JPG" }
+                    ];
+                    break;
+                case "دينية":
+                    places = [
+                        { name: "مكة المكرمة", description: "مكَّة المُكرَّمَة هي المدينة الأقدس عند المسلمين، بها المسجد الحرام، والكعبة التي تعد قبلة المسلمين في صلاتهم. تقع غرب المملكة العربية السعودية", imgSrc: "makka.jpg" },
+                        { name: "القدس", description: "تعتبر القدس مدينة مقدسة عند أتباع الديانات الإبراهيمية الثلاث الرئيسية: اليهودية، المسيحية، الإسلام. فبالنسبة لليهود، أصبحت المدينة أقدس المواقع بعد أن فتحها النبي والملك داود.", imgSrc: "alqods.JPG" },
+                        { name: "المغطس", description: "المغطس هو المكان الذي تعمد به يسوع على يد يوحنا المعمدان حسب المعتقدات المسيحية. بيت عنيا حيث كان يوحنا المعمدان يبشر ويعمد في الفترة الأولى من بشارته.", imgSrc: "mghtas.JPG" },
+                        { name: "الفاتيكان", description: "تعد دولة الفاتيكان أحد أقدم الأماكن المقدسة حول العالم وتقع وسط العاصمة الإيطالية روما وهي المقر الرئيسي للديانة المسيحية الكاثوليكية، حيث أنها من أكثر المذاهب اعتناقًا حول العالم.", imgSrc: "btros.jpg" }
+                    ];
+                    break;
+                default:
+                    places = [];
+                    break;
+            }
+            const placesContainer = document.getElementById("places-container");
+            placesContainer.innerHTML = '';  // مسح المحتوى القديم
+            places.forEach(place => {
+                const card = document.createElement('div');
+                card.classList.add('place-card');
+                card.innerHTML = ` 
+                    <img src="${place.imgSrc}" alt="${place.name}">
+                    <div class="place-name">${place.name}</div>
+                    <div class="place-description">${place.description}</div>
+                      <a href="#">عرض المزيد</a>
+                `;
+                placesContainer.appendChild(card);
+            });
+        }
+
+        // استدعاء الدالة عند تحميل الصفحة
+        window.onload = suggestPlaces;
+    </script>
+</body>
+</html>
