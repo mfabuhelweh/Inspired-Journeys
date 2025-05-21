@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>رحلات مناسبة لك</title>
     <style>
-        /* الخطوط */
         @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
 
         body {
@@ -19,7 +18,6 @@
             color: #ffffff;
         }
 
-        /* القائمة الثابتة */
         .menu {
             display: flex;
             justify-content: space-around;
@@ -174,7 +172,6 @@
         </div>
     </div>
 
-    <!-- محتوى الصفحة -->
     <h1>خطط السفر الذكية</h1>
     <form id="travelForm">
         <input type="number" id="budget" placeholder="الميزانية بالدينار" required>
@@ -206,26 +203,26 @@
             if (interest === "beaches") {
                 if (season === "summer") {
                     destination = "العقبة";
-                    imageSrc = "aqaba.jpg";  // تأكد من أن الصورة موجودة في المجلد الصحيح
+                    imageSrc = "aqaba.jpg";
                 } else {
                     destination = "البحر الميت";
-                    imageSrc = "deadsea.jpg";  // تأكد من أن الصورة موجودة في المجلد الصحيح
+                    imageSrc = "deadsea.jpg"; 
                 }
             } else if (interest === "mountains") {
                 if (season === "winter") {
                     destination = "عجلون";
-                    imageSrc = "ajloun.jpg";  // تأكد من أن الصورة موجودة في المجلد الصحيح
+                    imageSrc = "ajloun.jpg";
                 } else {
                     destination = "وادي رم";
-                    imageSrc = "wadi_rum.jpg";  // تأكد من أن الصورة موجودة في المجلد الصحيح
+                    imageSrc = "wadi_rum.jpg";  
                 }
             } else if (interest === "culture") {
                 if (season === "autumn") {
                     destination = "جرش";
-                    imageSrc = "jerash.jpg";  // تأكد من أن الصورة موجودة في المجلد الصحيح
+                    imageSrc = "jerash.jpg";  
                 } else {
                     destination = "مادبا";
-                    imageSrc = "madaba.jpg";  // تأكد من أن الصورة موجودة في المجلد الصحيح
+                    imageSrc = "madaba.jpg";  
                 }
             }
 
