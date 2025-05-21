@@ -11,7 +11,6 @@ body {
     line-height: 1.6;
 }
 
-/* Navbar */
 nav {
     background-color: #2c3e50;
     padding: 15px 10%;
@@ -46,7 +45,6 @@ nav {
     color: #e74c3c;
 }
 
-/* Hero Section */
 .hero {
     background: linear-gradient(rgba(44, 62, 80, 0.6), rgba(44, 62, 80, 0.6)), url('your-image.jpg') no-repeat center center/cover;
     color: #ffffff;
@@ -65,7 +63,6 @@ nav {
     margin: 0 auto;
 }
 
-/* General Section */
 .section {
     padding: 70px 10%;
     background-color: #ffffff;
@@ -86,7 +83,6 @@ h2 {
     color: #34495e;
 }
 
-/* Texts */
 p {
     font-size: 1.1rem;
     color: #000000;
@@ -94,7 +90,6 @@ p {
 
 }
 
-/* Projects */
 .project-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -124,7 +119,6 @@ p {
     color: #7f8c8d;
 }
 
-/* Contact */
 #contact a {
     color: #e74c3c;
     text-decoration: none;
@@ -134,7 +128,6 @@ p {
     text-decoration: underline;
 }
 
-/* Footer */
 footer {
     background-color: #2c3e50;
     color: #ecf0f1;
